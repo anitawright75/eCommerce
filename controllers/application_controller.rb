@@ -1,7 +1,7 @@
 class ApplicationController < Sinatra::Base
 
-	@account_message = ''
-	@username = ''
+	@account_message = " "
+	@username = ' '
 
 	require 'bundler'
 	Bundler.require
@@ -11,9 +11,9 @@ class ApplicationController < Sinatra::Base
 		:database => 'shopping_api'
 	)
 
-	# set :public_folder, File.expand_path('../../public', __FILE__)
-	# set :views, File.expand_path('../../views', __FILE__)
-	# enable :sessions
+	set :public_folder, File.expand_path('../../public', __FILE__)
+	set :views, File.expand_path('../../views', __FILE__)
+	enable :sessions
 
 	not_found do
 		erb :not_found	#404 page returned if value is met

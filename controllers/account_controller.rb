@@ -1,6 +1,7 @@
 class AccountController < ApplicationController
 
-	@username = ' '
+	@username = ''
+
 
 	get '/' do
 		#login/registration page info
